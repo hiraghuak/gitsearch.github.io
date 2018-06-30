@@ -1,0 +1,26 @@
+<br/>
+<br/>
+
+
+
+<h2>Hi Im Home page</h2>
+<br/>
+<br/>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <input type="email" class="form-control" id="email" [(ngModel)]=cityName>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-danger" (click)=searchCity()>Search</button>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<ul class="list-group" *ngFor=" let cityHumids of cityHumid;">
+  <li class="list-group-item"> {{cityHumids.name}} | Latitude {{cityHumids.coord.lat}} | Longitude {{cityHumids.coord.lon}}</li>
+</ul>
